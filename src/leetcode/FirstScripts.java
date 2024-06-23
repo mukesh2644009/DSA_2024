@@ -11,7 +11,7 @@ public class FirstScripts {
 		System.out.print("Enter a string: ");
 		String str= sc.nextLine(); //reads string.
 		
-		String output = str.replaceAll(" ", "_").toLowerCase();
+		String output = str.replaceAll("[\\s-]+", "_").toLowerCase();
 		
 		DateFormat df = new SimpleDateFormat("dd_MM_yyyy");
 		String data = output + df.format(new Date());
